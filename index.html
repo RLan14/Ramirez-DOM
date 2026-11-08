@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller DOM - Ramirez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+        }
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+            border: 1px solid #0056b3;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            margin-right: 6px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input[type="text"] {
+            padding: 7px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .resaltado {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="titulo-principal">Laboratorio de Manipulación del DOM</h1>
+        <p>Estudiante: <strong>Ramirez</strong></p>
+    </header>
+
+    <main>
+        <!-- Ejercicio 1: Modificación de Texto y Estilos -->
+        <section class="card">
+            <h2>1. Modificar Contenido de Texto</h2>
+            <p id="parrafo-estado">Estado inicial: sin cambios.</p>
+            <button type="button" onclick="cambiarTextoEstado()">Modificar Texto</button>
+            <button type="button" onclick="restablecerTextoEstado()">Restablecer</button>
+        </section>
+
+        <!-- Ejercicio 2: Inserción Dinámica de Elementos -->
+        <section class="card">
+            <h2>2. Inserción de Nuevos Nodos (createElement y appendChild)</h2>
+            <input type="text" id="input-item" placeholder="Escriba un nuevo elemento">
+            <button type="button" onclick="agregarElementoLista()">Agregar a la lista</button>
+            <ul id="lista-dinamica">
+                <li>Elemento base del sistema</li>
+            </ul>
+        </section>
+
+        <!-- Ejercicio 3: Eliminación de Nodos -->
+        <section class="card">
+            <h2>3. Eliminación de Elementos del DOM (remove)</h2>
+            <p>Presione el botón para remover el último elemento de la lista anterior:</p>
+            <button type="button" onclick="eliminarUltimoElemento()">Eliminar Último Nodo</button>
+        </section>
+
+        <!-- Ejercicio 4: Alternar Clases CSS -->
+        <section class="card">
+            <h2>4. Manipulación de Clases y Atributos</h2>
+            <p id="texto-alerta">Texto sujeto a alternancia de estilos dinámicos.</p>
+            <button type="button" onclick="alternarClaseAlerta()">Alternar Clase CSS</button>
+        </section>
+    </main>
+
+    <!-- Enlace a la carpeta scritps según la instrucción -->
+    <script src="scritps/functions.js"></script>
+</body>
+</html>
